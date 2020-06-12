@@ -17,8 +17,9 @@ const logger = require("./middleware/logger")
 const userRouter = require("./users/userRouter")
 const postRouter = require("./posts/postRouter")
 
+
 const server = express()
-const port = 8888
+const port = process.env.PORT || 8888
 
 server.use(express.json())
 server.use(logger())
